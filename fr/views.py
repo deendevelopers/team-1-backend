@@ -13,5 +13,7 @@ def mosques_list(request):
 
 
 def mosques_detail(request, mosque_id):
-	data = mosque_main.objects.get(id=mosque_id)
+	data = list(mosque_main.objects.filter(id=mosque_id).values())
+
+
 	return JsonResponse(data,safe=False)
