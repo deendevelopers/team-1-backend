@@ -2,7 +2,7 @@ from .settings import *
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS.append('*')
 
@@ -32,13 +32,15 @@ ROOT_URLCONF = 'frontrow.urls'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-         'HOST': 'ec2-54-247-72-30.eu-west-1.compute.amazonaws.com',
-        'NAME': 'dc4u0105i2ij39',
-        'USER': 'jwzelpolwsjqgz',
-        'PASSWORD': 'c497db389a9a4b98a487f77e6b4ed0248ef403c4c903acabb0b5fd63a4abef32',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'frontrow_test',                      
+        'USER': 'postgres',
+        'PASSWORD': 'lizard',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 STATIC_URL = '/static/'
