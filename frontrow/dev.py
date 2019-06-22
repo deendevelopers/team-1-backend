@@ -10,6 +10,7 @@ ALLOWED_HOSTS.append('*')
 
 INSTALLED_APPS = [
     'fr.apps.FrConfig',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
