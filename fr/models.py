@@ -10,3 +10,10 @@ class mosque_main(models.Model):
 	name = models.CharField(max_length=1000)
 	postcode = models.CharField(max_length=1000)
 	website = models.CharField(max_length=1000)
+
+class Mosque_Comment(models.Model):
+	user_id = models.CharField(max_length=100)
+	mosque_id = models.CharField(max_length=100)
+	category_name = models.CharField(max_length=100)
+	comment = models.CharField(max_length=10000)
+	timestamp = models.DateTimeField(auto_now_add=True)
