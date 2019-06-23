@@ -18,3 +18,9 @@ class Mosque_Comment(models.Model):
 	comment = models.CharField(max_length=10000)
 	comment_type = models.CharField(max_length=100)
 	timestamp = models.DateTimeField(auto_now_add=True)
+
+class Comment_Vote(models.Model):
+	user_id_voter = models.CharField(max_length=100)
+	comment_id = models.CharField(max_length=100)
+	vote_num = models.IntegerField()
+		
