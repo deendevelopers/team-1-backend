@@ -16,4 +16,5 @@ class Mosque_Comment(models.Model):
 	mosque_id = models.CharField(max_length=100)
 	category_name = models.CharField(max_length=100)
 	comment = models.CharField(max_length=10000)
+	comment_type = models.CharField(max_length=100)
 	timestamp = models.DateTimeField(auto_now_add=True)
