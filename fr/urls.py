@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^mosques/$', views.mosques_list, name='mosques_list'),
     url(r'^mosques/(?P<mosque_id>\d+)/$', views.mosques_detail, name='mosques_detail'),
     
+    
 ]

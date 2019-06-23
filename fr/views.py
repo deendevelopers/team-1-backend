@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import mosque_main
+from .models import mosque_main, Comment_Vote
 from django.http import JsonResponse
 # Create your views here.
 
@@ -14,6 +14,7 @@ def mosques_list(request):
 
 def mosques_detail(request, mosque_id):
 	data = list(mosque_main.objects.filter(id=mosque_id).values())[0]
-
-
+	
 	return JsonResponse(data,safe=False)
+
+
